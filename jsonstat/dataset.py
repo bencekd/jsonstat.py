@@ -262,7 +262,7 @@ class JsonStatDataSet:
             raise JsonStatException('dataset not initialized')
 
         # decoding args
-        idx = self._2idx(*args, **kargs)
+        idx = str(self._2idx(*args, **kargs))
         value = self.__value[idx]
 
         #
