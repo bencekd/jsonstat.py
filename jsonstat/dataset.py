@@ -262,7 +262,7 @@ class JsonStatDataSet:
             raise JsonStatException('dataset not initialized')
 
         # decoding args
-        idx = self._2idx(*args, **kargs)
+        idx = str(self._2idx(*args, **kargs))
         value = self.__value[idx]
 
         #
@@ -305,7 +305,7 @@ class JsonStatDataSet:
         :param lst: [0,3,4]
         :returns: value at dimension [0,3,4]
         """
-        return self.__value[self.lint_as_idx(lst)]
+        return self.__value[str(self.lint_as_idx(lst))]
 
     #
     # dataset can be access using different type of indexes
